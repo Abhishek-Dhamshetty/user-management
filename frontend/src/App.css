@@ -1,0 +1,118 @@
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dark Mode & Light Mode */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --input-bg: rgba(255, 255, 255, 0.8);
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: rgba(30, 30, 30, 0.9);
+  --input-bg: rgba(40, 40, 40, 0.8);
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 250px;
+  background: #343a40;
+  color: white;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.sidebar a:hover {
+  background: #495057;
+}
+
+/* Login & Signup */
+.auth-container {
+  width: 350px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--card-bg);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* User List Table */
+.user-table tr:hover {
+  background: rgba(0, 123, 255, 0.1);
+}
+
+/* Profile Card */
+.profile-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Toggle Switch */
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch {
+  width: 40px;
+  height: 20px;
+  background: gray;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle-switch::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
+
+.toggle-switch.active {
+  background: #007bff;
+}
+
+.toggle-switch.active::after {
+  left: 22px;
+}

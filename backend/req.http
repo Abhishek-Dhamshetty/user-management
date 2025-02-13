@@ -1,0 +1,65 @@
+POST http://localhost:3000/user-api/user
+Content-Type: application/json
+
+
+{
+    "username":"user1",
+    "email":"user1@mail.in",
+    "profileImageUrl":"user1.img",
+    "role":"student",
+    "description":"abcdefghi jklmn",
+    "isActive":true
+}
+
+### get req
+GET http://localhost:3000/user-api/users
+
+### put for edit
+PUT http://localhost:3000/user-api/user/user1 
+Content-Type: application/json
+
+
+{
+    "username":"user1",
+    "email":"user1@mail.in",
+    "profileImageUrl":"user1.img",
+    "role":"student",
+    "description":"user1kaka bhai",
+    "isActive":true
+}
+
+### put req for soft delete
+PUT http://localhost:3000/user-api/users/user1 
+Content-Type: application/json
+
+
+{
+    "username":"user1",
+    "email":"user1@mail.in",
+    "profileImageUrl":"user1.img",
+    "role":"student",
+    "description":"user1kaka",
+    "isActive":false
+}
+### getting the data of deleted users
+GET http://localhost:3000/user-api/users/del
+
+### restoring of deleted users
+PUT  http://localhost:3000/user-api/user/res/user1
+Content-Type: application/json
+
+{
+    "username":"user1",
+    "email":"user1@mail.in",
+    "profileImageUrl":"user1.img",
+    "role":"student",
+    "description":"user1kaka",
+    "isActive":true
+}
+
+
+### get req for admin of all users
+GET http://localhost:3000/admin-api/users
+
+### deleted users
+PUT http://localhost:3000/admin-api/users/delete/user1

@@ -1,0 +1,226 @@
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dark Mode & Light Mode */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --input-bg: rgba(255, 255, 255, 0.8);
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: rgba(30, 30, 30, 0.9);
+  --input-bg: rgba(40, 40, 40, 0.8);
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 250px;
+  background: #343a40;
+  color: white;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.sidebar a:hover {
+  background: #495057;
+}
+
+/* Login & Signup */
+.auth-container {
+  width: 350px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--card-bg);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* User List Table */
+.user-table tr:hover {
+  background: rgba(0, 123, 255, 0.1);
+}
+
+/* Profile Card */
+.profile-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Toggle Switch */
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch {
+  width: 40px;
+  height: 20px;
+  background: gray;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle-switch::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
+
+.toggle-switch.active {
+  background: #007bff;
+}
+
+.toggle-switch.active::after {
+  left: 22px;
+}
+/* Light Mode (Default) */
+:root {
+  --card-bg: #ffffff;
+  --card-text: #000;
+  --border-color: #ddd;
+  --btn-bg: black;
+  --btn-text: white;
+  --btn-border: white;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --card-bg: #222;
+  --card-text: #fff;
+  --border-color: #444;
+  --btn-bg: white;
+  --btn-text: black;
+  --btn-border: black;
+}
+/* Light Mode */
+:root {
+  --card-bg: white;
+  --text-color: black;
+  --text-color-secondary: #333; /* Email and other texts */
+}
+
+/* Dark Mode */
+.dark-mode {
+  --card-bg: #222;
+  --text-color: white;
+  --text-color-secondary: #bbb; /* Email and other texts in dark mode */
+}
+.user-card {
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .user-card {
+  background-color: #333;
+  color: white;
+}
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-color);
+  transition: background 0.3s ease;
+}.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-color);
+  transition: background 0.3s ease;
+}
+
+.auth-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.auth-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.auth-input {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode and Light Mode */
+:root {
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-color: #333;
+}
+
+.dark-mode {
+  --bg-color: #1a1a2e;
+  --card-bg: #16213e;
+  --text-color: #ffffff;
+}
