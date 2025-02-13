@@ -35,7 +35,7 @@ function Home() {
     document.body.style.color = darkMode ? "black" : "white";
   }
   function getStarted(){
-    navigate('/login')
+    navigate('/');
   }
 
   return (
@@ -56,7 +56,7 @@ function Home() {
       >
         <a
           className="navbar-brand fw-bold"
-          href="#"
+          href="/"
           style={{
             color: darkMode ? "white" : "black",
             fontSize: "1.5rem",
