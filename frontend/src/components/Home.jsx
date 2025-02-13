@@ -35,7 +35,7 @@ function Home() {
     document.body.style.color = darkMode ? "black" : "white";
   }
   function getStarted(){
-    navigate('/');
+    navigate('/adduser');
   }
 
   return (
