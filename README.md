@@ -1,29 +1,73 @@
-User Management App
+# User Management System
+A full-stack user management platform that allows administrators to manage users efficiently. The system includes user authentication, role-based access, and a well-designed dashboard for better usability.
 
-Overview
+## Features
 
-The User Management App is a web application that allows administrators to manage users efficiently. It provides user authentication, role-based categorization, and interactive UI elements for managing active and removed users.
+### Frontend
+#### User Authentication
+- Users can register and log in.
+- Admin authentication with restricted access to manage users.
 
-Features
+#### User Dashboard
+- Displays a list of registered users with search and filter options.
+- Categorized user roles for better management.
 
-User Authentication: Sign up and login with fields for username, email, profile image, role, and description.
+#### User Management
+- Admin can create, update, and remove users.
+- Profile image upload for user accounts.
+- Role assignment (Student, Employee, Teacher) with detailed descriptions.
 
-Role-Based Management: Users are categorized as Student, Employee, or Teacher.
+#### Responsive Design
+- Optimized for desktops, tablets, and mobile devices.
 
-User List & Removal: View active users, remove users, and manage removed users separately.
+### Backend
+#### Authentication API
+- Secure authentication using JWT for user login and registration.
 
-Bootstrap & CSS Styling: Well-designed UI with smooth animations and support for dark/light mode.
+#### User Management API
+- CRUD operations for user creation, editing, and deletion.
+- Role-based access control for admin privileges.
 
-Interactive Modals: Used for user actions without disrupting the interface.
+#### Real-Time Updates
+- WebSockets for live updates on user management actions.
 
-Form Handling: Mandatory fields for role and description after signup to ensure data completeness.
+### Database
+- User data is stored efficiently in **MongoDB Atlas**.
 
-Database Integration: Stores user data dynamically and updates UI accordingly.
+## Deployment
 
-Tech Stack
+### Frontend Hosting
+- Deployed on **Vercel** for free-tier hosting.
 
-Frontend: HTML, CSS, Bootstrap (for styling and animations)
+### Backend Hosting
+- Deployed on **Render** for free-tier hosting.
 
-Backend: Node.js (Express.js)
+### Database
+- **MongoDB Atlas** (Free Plan) is used for database hosting.
 
-Database: MongoDB (for user data storage)
+## Setup Instructions
+
+### Prerequisites
+- Node.js installed on your machine.
+- MongoDB Atlas account for the database.
+
+### Steps to Run Locally
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Abhishek-Dhamshetty/user-management.git
+   cd user-management
+   ```
+2. Install dependencies for both frontend and backend:
+   ```sh
+   npm install
+   ```
+3. Set up environment variables:
+   - Create a `.env` file and configure database and authentication settings.
+
+4. Start the development server:
+   ```sh
+   npm start
+   ```
+
+5. Open your browser and visit `https://user-management-ab.vercel.app/` to access the application.
+
